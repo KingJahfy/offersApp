@@ -32,7 +32,7 @@ var OfferList = Backbone.Collection.extend({
 var offers = new OfferList;
 
 var OfferView = Backbone.View.extend({
-	tagName: 'li',
+	el: $('#offer_li'),
 	events:{
 		"click .selectOffer" : "toggleSelected"
 	},
@@ -79,14 +79,14 @@ var AppView = Backbone.View.extend({
 
 var App = new AppView;
 var offerA = new Offer;
-	offer.set({	
+	offerA.set({	
 		title: "Free Two Liter Bottle",
 		provider: "Coca Cola",
 		selected: false,
 		available: true
 	});
 var offerB = new Offer;
-	offer.set({	
+	offerB.set({	
 		title: "50% Off Air Jordan",
 		provider: "Nike",
 		selected: false,
