@@ -4,13 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>myOffers</title>
-	<link rel="stylesheet" href="">
-	<script src="/bower_components/handlebars/handlebars.min.js" type="text/javascript" charset="utf-8" async defer></script>	
-	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="/bower_components/underscore/underscore-min.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="/bower_components/backbone/backbone.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
-
+	<link rel="stylesheet" href="/styles/app.css">
+	<script src="/bower_components/handlebars/handlebars.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/underscore/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/backbone/backbone.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bower_components/Backbone.localStorage/backbone.localStorage.js" type="text/javascript" charset="utf-8"></script>
 	    <!-- templates -->
 	    <script id="offerTemplate" type="text/x-handlebars-template">
 		<div>
@@ -20,17 +19,11 @@
 		<div>
 	    </script>
 	    <!-- End templates -->
-
-	<script type="text/javascript">
-		$(function(){
-			var App = new AppView;
-		});
-	</script>
 </head>
 <body>
 	<section id="offerApp">
 		<header id="header">
-			<h1>Visualization</h1>
+			<h1>Offers</h1>
 		</header>
 		<div id="offersContainer">
 			<ul id="offer-list"></ul>
@@ -38,7 +31,9 @@
 	</section>
 
 	<footer id="info">
-	<p>facebook offer app</p>
+		<p>facebook offer app</p>
 	</footer>
+
+	<script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
