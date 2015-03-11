@@ -32,7 +32,7 @@ var OfferList = Backbone.Collection.extend({
 var offers = new OfferList;
 
 var OfferView = Backbone.View.extend({
-	el: $('#offer_li'),
+	tagName: 'li',
 	events:{
 		"click .selectOffer" : "toggleSelected"
 	},
@@ -46,6 +46,7 @@ var OfferView = Backbone.View.extend({
 		var html = template(this.model.toJSON());
 
 		this.$el.html(html);
+		debugger;
 		return this;
 	},
 	toggleSelected: function (){
@@ -68,6 +69,7 @@ var AppView = Backbone.View.extend({
 		var view = new OfferView({
 			model: offer
 		});
+		debugger;
 		this.$('#offer-list').append(view.render().el);
 	},
 	addAll: function (){
@@ -78,6 +80,7 @@ var AppView = Backbone.View.extend({
 });
 
 var App = new AppView;
+
 var offerA = new Offer;
 	offerA.set({	
 		title: "Free Two Liter Bottle",
@@ -92,5 +95,6 @@ var offerB = new Offer;
 		selected: false,
 		available: true
 	});
-offers.push('')
+offers.add(offerA);
+offers.add(offerB);
 });
