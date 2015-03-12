@@ -9,7 +9,8 @@ var Offer = Backbone.Model.extend({
 			title: "no offer",
 			provider: "n/a",
 			selected: false,
-			available: false
+			available: false,
+			logo: ''
 		};
 	},
 	toggle: function (){
@@ -34,7 +35,8 @@ var offers = new OfferList;
 var OfferView = Backbone.View.extend({
 	tagName: 'li',
 	events:{
-		"click .selectOffer" : "toggleSelected"
+		"click .selectOffer" : "toggleSelected",
+		"click a.destroy" : "clear"
 	},
 	initialize: function (){
 		this.listenTo(this.model, 'change', this.render);
@@ -49,6 +51,9 @@ var OfferView = Backbone.View.extend({
 		debugger;
 		return this;
 	},
+    clear: function() {
+      this.model.destroy();
+    },
 	toggleSelected: function (){
 		this.model.toggle();
 	}
@@ -86,7 +91,8 @@ var offerA = new Offer;
 		title: "Free Two Liter Bottle",
 		provider: "Coca Cola",
 		selected: false,
-		available: true
+		available: true,
+		logo: '/image/coke.png'
 	});
 var offerB = new Offer;
 	offerB.set({	

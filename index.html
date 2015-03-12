@@ -12,9 +12,16 @@
 	<script src="/bower_components/Backbone.localStorage/backbone.localStorage.js" type="text/javascript" charset="utf-8"></script>
 	    <!-- templates -->
 	    <script id="offerTemplate" type="text/x-handlebars-template">
-			<input class="toggle" type="checkbox" {{#if selected}} checked="checked" {{/if}} />
-			<label>{{title}}</label>
-			<a class="destroy"></a>
+				<div class="left-container">
+					<input class="toggle" type="checkbox" {{#if selected}} checked="checked" {{/if}} />
+					<label>{{title}}</label>
+				</div>
+				<div class="right-center-container">
+					<img src="{{logo}}" alt="&#9762;">
+				</div>
+				<div class="right-container">
+					<a class="destroy"></a>
+				</div>
 	    </script>
 	    <!-- End templates -->
 </head>

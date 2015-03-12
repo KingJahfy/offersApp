@@ -33,7 +33,10 @@ body {
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-
+.container {
+	width: 100%;
+	height: 100%;
+}
 #offerApp {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.9);
@@ -134,7 +137,21 @@ body {
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
-
+.left-container{
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+.right-center-container{
+	height: 100%;
+	width: 30%;
+	float: left;	
+}
+.right-container{
+	height: 100%;
+	width: 15%;
+	float: right;
+}
 #new-offer {
 	padding: 16px 16px 16px 60px;
 	border: none;
@@ -180,9 +197,14 @@ label[for='toggle-all'] {
 }
 
 #offer-list li {
+	height: 110px;
 	position: relative;
 	font-size: 24px;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 2px dotted #BE292A;
+}
+
+#offer-list img {
+	text-align: center;
 }
 
 #offer-list li:last-child {
